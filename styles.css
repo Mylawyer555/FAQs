@@ -1,0 +1,427 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+.cont{
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 4000;
+    margin-top: 0;
+    /* border: 2px solid black; */
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    background-color: #2c1762;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    z-index: 4000;
+}
+.logo{
+    width: 18%;
+    height: 50px;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img {
+    height: 60px;
+}
+.sign{
+    width: 10%;
+    margin-right: 25px;
+    font-size: 15px;
+    height: 52px;
+    font-family: Arial, sans-serif;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    color: #ff0475;;
+}
+
+.hero-section {
+    width: 100%;
+    height: 300px;
+    /* border: 2px solid black; */
+    background-image: url(/Screenshot\ 2024-05-26\ 112909.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.hero-text{
+    width: 40%;
+    height: 180px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3.2em;
+    color: #2c1762;
+    animation-duration: 2s;
+    animation-name: slideUp;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #e2e6ea;
+}
+
+.faq-answer {
+    padding: 20px;
+    display: none;
+    border-top: 1px solid #e5e5e5;
+    animation: slideDown 0.5s ease-out;
+}
+
+footer {
+    width: 100%;
+    height: 450px;
+    background-color: #2c1762;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    gap: 5%;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from{transform: translatey(100%)}
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px;
+    }
+}
+.main2{
+    width: 100%;
+    background-color: #fff;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    
+}
+.accordion{
+    margin: 60px auto;
+    width: 520px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                0   10px 30px -10px rgba(29, 1, 80, .1);
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #2c1762;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.feat-card{
+    width: 100%;
+    height: 500px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+}
+.feat-wrp{
+    width: 80%;
+    height: 350px;
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    background-color: #4ef1e121;;
+    color: #2c1762;
+    display: flex;
+    gap: 20%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+.visit{
+    width: 23%;
+    height: 60px;
+    /* border: 2px solid black; */
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 11px;
+    background-color: #ff0475;;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+    transform-style: start;
+
+}
+.visit:hover{
+    background-color: #2c1762;
+    opacity: 3s ;
+    transform: left(100%);
+}
+.foot-text{
+    width: 13%;
+    height: 200px;
+    /* border: 2px solid white; */
+    margin-bottom: 45px;
+}
+.foot-logo{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid white; */
+    background-position: center;
+    background-size: contain;
+    background-image: url(/Screenshot\ 2024-05-26\ 104521.png);
+}
+.foot-ng{
+    width: 100%;
+    height: 43px;
+    /* border: 1px solid white; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/Screenshot\ 2024-05-27\ 010005.png);
+    cursor: pointer;
+}
+.foot-text-section{
+    width: 11%;
+    height: 270px;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.feature{
+    font-weight: bolder;
+    font-size: 15px;
+    color:  #b48cfc;;
+}
+.vid-card{
+    width: 80%;
+    height: 50px;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.vid-card1{
+    width: 20%;
+    height: 40px;
+    /* border: 1px solid white; */
+    background-image: url(/Screenshot\ 2024-05-27\ 020847.png);
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+.vid-card2{
+    width: 20%;
+    height: 40px;
+    /* border: 1px solid white; */
+    background-image: url(/Screenshot\ 2024-05-27\ 020935.png);
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+.end{
+    width: 77%;
+    height: 40px;
+    /* border: 1px solid white; */
+    font-size: 11px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+/* Hide the checkboxes */
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the accordion items */
+.accordion-item {
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    background: #fff;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                0   10px 30px -10px rgba(29, 1, 80, .1);
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 520px;
+}
+/* Style the accordion headers */
+.accordion .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #2c1762;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style the accordion icons */
+.accordion .accordion-icon {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: normal;
+    font-size: 20px;
+    transition: transform 0.3s;
+    background-color: #b38cfc31;;
+}
+
+/* Style the accordion content */
+.accordion .accordion-content {
+    color: #555;
+    padding: 0 10px;
+    line-height: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+/* Expand accordion content when the checkbox is checked */
+.accordion input[type="checkbox"]:checked + .accordion-header + .accordion-content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+/* Change the icon when the checkbox is checked */
+.accordion input[type="checkbox"]:checked + .accordion-header .accordion-icon {
+    transform: rotate(deg);
+    content: '-';
+}
